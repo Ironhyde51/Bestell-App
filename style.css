@@ -141,7 +141,7 @@
 
 /* Menu */
 .menu {
-    padding: 16px 0 40px 0;
+    padding: 16px 64px 40px 64px;
 }
 
 .section-heading {
@@ -278,7 +278,37 @@
     color: #111;
 }
 
-/* small helper (page bottom space) */
-.page-bottom {
-    height: 160px;
+
+/* footer */
+.footer {
+  background-color: #ff8000;
+  color: white;
+  padding: 24px 0;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.social-icons img {
+  height: 22px;
+  width: 22px;
+  margin: 10px 6px;
+  filter: brightness(0) invert(1);
+  transition: 0.2s;
+}
+
+.social-icons img:hover {
+  opacity: 0.8;
 }
