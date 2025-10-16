@@ -1,0 +1,27 @@
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart {
+        position: relative;
+        width: auto;
+        margin-top: 18px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .logo-badge {
+        width: 76px;
+        height: 76px;
+        transform: translateY(20px);
+    }
+
+    .cart {
+        position: relative;
+        top: auto;
+        margin-top: 16px;
+    }
+}

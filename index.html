@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestell-App</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/basics.css">
+  <link rel="stylesheet" href="./css/mediaquaris.css">
+  <link rel="icon" type="image/vnd.icon" href="/assets/Favicon/favicon.ico">
+</head>
+
+<body onload="init()"> 
+  <header class="topbar">
+    <div class="container">
+      <img src="./assets/Logo/Logo.png" alt="Logo" class="logo">
+    </div>
+  </header>
+  <main class="layout">
+    <section class="content">
+
+      <div class="hero">
+        <img src="./assets/Gerichte/SpaghettiGarnelen.jpg" alt="hero" class="hero-bg">
+        <div class="hero-inner container">
+          <div class="restaurant-info">
+            <h1 class="title">Paradise Noodles</h1>
+            <p class="rating">Bewertung: 4,5 ⭐</p>
+          </div>
+          <div class="logo-badge">
+            <img src="./assets/Logo/noodle.png" alt="Badge">
+          </div>
+        </div>
+      </div>
+
+      <nav class="tabs container">
+        <button onclick="renderMenu(0)" class="tab active">Alle</button>
+        <button onclick="renderMenu(1)" class="tab">Pizza</button>
+        <button onclick="renderMenu(2)" class="tab">Burger</button>
+        <button onclick="renderMenu(3)" class="tab">Asiatisch</button>
+        <button onclick="renderMenu(4)" class="tab">Vegan</button>
+        <button onclick="renderMenu(5)" class="tab">Dessert</button>
+        <button onclick="renderMenu(6)" class="tab">Getränke</button>
+      </nav>
+
+      <div class="band container">
+        <img src="./assets/Gerichte/türkische-pide.jpg" alt="food band">
+      </div>
+
+      <section class="menu container">
+        <h2 class="section-heading">Unsere Gerichte</h2>
+        <ul id="menuList" class="menu-list"></ul>
+      </section>
+
+    </section>
+
+    <aside class="cart">
+      <div class="cart-header">Warenkorb</div>
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="row"><span>Zwischensumme</span><span id="subtotal">0,00€</span></div>
+        <div class="row"><span>Lieferkosten</span><span id="delivery">5,00€</span></div>
+        <div class="row total"><span>Gesamt</span><span id="total">5,00€</span></div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./js/object.js"></script>
+  <script src="./js/template.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
