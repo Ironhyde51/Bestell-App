@@ -66,3 +66,13 @@ let menuData = [
     ]
   }
 ];
+
+let categoryImages = [
+  "./assets/Gerichte/türkische-pide.jpg",      
+  "./assets/Gerichte/pizza.jpg",                
+  "./assets/Gerichte/burger.jpg",               
+  "./assets/Gerichte/asiatisch.jpg",            
+  "./assets/Gerichte/vegan.jpg",                
+  "./assets/Gerichte/dessert.jpg",              
+  "./assets/Gerichte/getraenk.jpg"              
+];
