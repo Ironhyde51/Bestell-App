@@ -76,14 +76,20 @@ function renderCart() {
 // MENU \\
 function renderMenu(categoryIndex) {
   let list = document.getElementById("menuList");
-  let html = "";
   let categories = getCategoriesToShow(categoryIndex);
-  for (let i = 0; i < categories.length; i++) {
-    html += renderCategory(categories[i], categoryIndex === 0 ? i : categoryIndex - 1);
-  }
+  let html = makeMenuHTML(categories, categoryIndex);
   list.innerHTML = html;
   updateActiveTab(categoryIndex);
   updateCategoryImage(categoryIndex);
+}
+
+function makeMenuHTML(categories, categoryIndex) {
+  let html = "";
+  for (let i = 0; i < categories.length; i++) {
+    let index = categoryIndex === 0 ? i : categoryIndex - 1;
+    html += renderCategory(categories[i], index);
+  }
+  return html;
 }
 
 function getCategoriesToShow(categoryIndex) {
@@ -128,6 +134,13 @@ function updateActiveTab(activeIndex) {
   }
 }
 
+function toggleDarkMode() {
+    if (document.body.className.indexOf("dark-mode") === -1) {
+        document.body.className += " dark-mode";
+    } else {
+        document.body.className = document.body.className.replace(" dark-mode", "");
+    }
+}
 
 // MAIN \\
 function init() {

@@ -1,9 +1,25 @@
+/* 1440px */
+@media (max-width: 1440px) {
+    .layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
 
+/* 1024px */
+@media (max-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr 300px;
+    }
+    .menu {
+        padding: 16px 32px;
+    }
+}
+
+/* 900px */
 @media (max-width: 900px) {
     .layout {
         grid-template-columns: 1fr;
     }
-
     .cart {
         position: relative;
         width: auto;
@@ -11,17 +27,98 @@
     }
 }
 
-
+/* 600px  */
 @media (max-width: 600px) {
     .logo-badge {
         width: 76px;
         height: 76px;
         transform: translateY(20px);
     }
-
     .cart {
         position: relative;
         top: auto;
         margin-top: 16px;
     }
+}
+
+/* 450px */
+@media (max-width: 450px) {
+    .tabs {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .tab {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    #darkModeToggle {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+}
+
+/* 300px */
+@media (max-width: 300px) {
+    .logo {
+        height: 32px;
+    }
+    #darkModeToggle {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+    .tab {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
+
+/* DARK MODE 900px */
+
+@media (max-width: 900px) {
+  body.dark-mode .layout {
+      grid-template-columns: 1fr;
+  }
+  body.dark-mode .cart {
+      position: relative;
+      width: auto;
+      margin-top: 18px;
+  }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+  body.dark-mode .logo-badge {
+      width: 76px;
+      height: 76px;
+      transform: translateY(20px);
+  }
+  body.dark-mode .cart {
+      position: relative;
+      top: auto;
+      margin-top: 16px;
+  }
+}
+
+/* 450px */
+@media (max-width: 450px) {
+  body.dark-mode #darkModeToggle {
+      background-color: #bb86fc;
+      color: #121212;
+  }
+  body.dark-mode .tab {
+      background-color: #444;
+      color: #f0f0f0;
+  }
+}
+
+/* 300px */
+@media (max-width: 300px) {
+  body.dark-mode #darkModeToggle {
+      font-size: 12px;
+      padding: 4px 6px;
+  }
+  body.dark-mode .tab {
+      font-size: 12px;
+      padding: 5px 8px;
+  }
 }

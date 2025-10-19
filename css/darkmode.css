@@ -1,0 +1,29 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .topbar,
+body.dark-mode .cart,
+body.dark-mode .menu-item,
+body.dark-mode .cart-item {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode .add-btn,
+body.dark-mode .remove-btn {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+body.dark-mode .tab.active {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+body.dark-mode .tab {
+    background-color: #333;
+    color: #f0f0f0;
+}
