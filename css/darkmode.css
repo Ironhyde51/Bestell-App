@@ -1,14 +1,6 @@
-/* Dark Mode Styles */
+/* Dark Mode Styles  */
 body.dark-mode {
     background-color: #121212;
-    color: #f0f0f0;
-}
-
-body.dark-mode .topbar,
-body.dark-mode .cart,
-body.dark-mode .menu-item,
-body.dark-mode .cart-item {
-    background-color: #1e1e1e;
     color: #f0f0f0;
 }
 
@@ -25,5 +17,170 @@ body.dark-mode .tab.active {
 
 body.dark-mode .tab {
     background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .order-message .ok-btn {
+    background: #bb86fc;
+    color: #121212;
+    box-shadow: 0 4px 10px rgba(187, 134, 252, 0.12);
+}
+
+body.dark-mode .order-btn {
+    background: #690579;
+}
+
+body.dark-mode .order-btn:hover {
+    background: #8c08a1;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+#darkModeToggle {
+    background: #ff6600;
+    color: #ff8000;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+#darkModeToggle:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+body.dark-mode .topbar {
+    background: #690579;
+}
+
+body.dark-mode #darkModeToggle {
+    background: #8c08a1;
+    color: #121212;
+}
+
+body.dark-mode .layout {
+    background-color: #121212;
+    flex: 1;
+}
+
+body.dark-mode .cart,
+body.dark-mode .content,
+body.dark-mode .menu-item,
+body.dark-mode .cart-item {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .order-message {
+    margin: 15px 0;
+    padding: 12px;
+    background: #444;
+    border: 1px solid #bb86fc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+body.dark-mode .social-icons img {
+    color: white;
+    filter: none;
+    /* filter: invert(1) brightness(1.3) contrast(1.1); */
+}
+
+body.dark-mode .cart-header {
+    color: #888;
+}
+
+body.dark-mode .topbar,
+body.dark-mode .footer {
+    background-color: #690579;
+}
+
+body.dark-mode .hero {
+    background-color: #690579;
+}
+
+body.dark-mode .title,
+body.dark-mode .rating,
+body.dark-mode .restaurant-info {
+    color: #f0f0f0;
+}
+
+body.dark-mode .logo-badge {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .tab {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+body.dark-mode .tab.active {
+    background-color: #bb86fc;
+    color: #121212;
+    border-color: #bb86fc;
+}
+
+body.dark-mode .add-btn {
+    background-color: #bb86fc;
+    color: #121212;
+    box-shadow: 0 6px 14px rgba(187, 134, 252, 0.3);
+}
+
+body.dark-mode .remove-btn {
+    background-color: #cf6679;
+    color: #121212;
+    box-shadow: 0 6px 14px rgba(207, 102, 121, 0.3);
+}
+
+body.dark-mode .add-btn:hover,
+body.dark-mode .remove-btn:hover {
+    filter: brightness(1.1);
+}
+
+body.dark-mode .price,
+body.dark-mode .ci-price,
+body.dark-mode .ci-name {
+    color: #bb86fc;
+}
+
+body.dark-mode .menu-item,
+body.dark-mode .cart-item {
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .menu-list {
+    border-top: 1px solid #333;
+}
+
+body.dark-mode .dish {
+    color: #f0f0f0;
+}
+
+body.dark-mode .section-heading {
+    color: #888;
+}
+
+body.dark-mode .cart-summary .row,
+body.dark-mode .cart-summary .total {
+    color: #f0f0f0;
+}
+
+
+body.dark-mode .band img {
+    filter: brightness(0.7);
+}
+
+body.dark-mode .footer {
+    background-color: #690579;
     color: #f0f0f0;
 }

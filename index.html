@@ -60,10 +60,19 @@
       <div class="cart-header">Warenkorb</div>
       <div id="cartItems" class="cart-items"></div>
 
+
       <div class="cart-summary">
         <div class="row"><span>Zwischensumme</span><span id="subtotal">0,00€</span></div>
         <div class="row"><span>Lieferkosten</span><span id="delivery">5,00€</span></div>
         <div class="row total"><span>Gesamt</span><span id="total">5,00€</span></div>
+      </div>
+
+      <button class="order-btn" onclick="placeOrder()">Bestellung abschicken</button>
+      </div>
+
+      <div id="orderMessage" class="order-message" style="display: none;">
+        ✅ Du hast eine Testbestellung gemacht!
+        <button onclick="hideMessage()">OK</button>
       </div>
     </aside>
   </main>

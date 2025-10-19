@@ -25,5 +25,6 @@ function createCartItemHTML(item) {
         <button class="remove-btn" onclick="removeItemFromCart('${item.name}')">−</button>
       </div>
     </div>
+    
   `;
 }

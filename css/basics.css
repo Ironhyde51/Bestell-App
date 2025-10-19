@@ -8,7 +8,6 @@
 
 html,
 body {
-    height: 100%;
     font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     color: #222;
     background: #fafafa;
@@ -47,4 +46,48 @@ body {
 
 .remove-btn:active {
     transform: scale(0.95);
+}
+
+.order-btn {
+    background: #28a745; 
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 6px 14px rgba(40, 167, 69, 0.14);
+    width: 100%;
+    margin-top: 12px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.order-btn:hover {
+    background: #218838;
+}
+
+.order-btn:active {
+    transform: scale(0.96);
+}
+
+.order-message .ok-btn {
+  display: inline-block;
+  margin-left: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.12);
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+
+.order-message .ok-btn:hover {
+  background: #218838;
+}
+
+.order-message .ok-btn:active {
+  transform: scale(0.97);
 }
