@@ -68,7 +68,7 @@ let menuData = [
 ];
 
 let categoryImages = [
-  "./assets/Gerichte/türkische-pide.jpg",      
+  "./assets/Gerichte/allfood.jpg",      
   "./assets/Gerichte/pizza.jpg",                
   "./assets/Gerichte/burger.jpg",               
   "./assets/Gerichte/asiatisch.jpg",            

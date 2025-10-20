@@ -27,6 +27,7 @@ It allows users to browse meals by category, view detailed descriptions, and add
 ├── js/
 │ ├── object.js # Contains menu data
 │ ├── script.js # Main application logic
+│ ├── mobil-cart.js # Contains Mobile Cart for Repo 
 │ └── template.js # HTML template generation
 └── assets/
 ├── Logo/

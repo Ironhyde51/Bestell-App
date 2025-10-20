@@ -1,3 +1,4 @@
+//  Dish HTML 
 function createDishHTML(dish, index, categoryIndex) {
   return `
     <li class="menu-item">
@@ -13,6 +14,7 @@ function createDishHTML(dish, index, categoryIndex) {
   `;
 }
 
+// Desktop Cart Item HTML
 function createCartItemHTML(item) {
   return `
     <div class="cart-item">
@@ -25,6 +27,19 @@ function createCartItemHTML(item) {
         <button class="remove-btn" onclick="removeItemFromCart('${item.name}')">−</button>
       </div>
     </div>
-    
   `;
+}
+
+// Mobile Cart Items HTML
+function buildMobileCartItems() {
+    let html = "";
+    for (let i = 0; i < cart.length; i++) {
+        html += `
+            <div>
+                ${cart[i].name} (${cart[i].quantity}x)
+                <button onclick="removeItemFromCart('${cart[i].name}')">−</button>
+            </div>
+        `;
+    }
+    return html;
 }

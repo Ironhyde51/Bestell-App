@@ -93,11 +93,29 @@
       </div>
     </div>
   </footer>
+  
+<!-- Responsive Warenkorb (Overlay/Dialog) -->
+<button id="cartToggleBtn" class="mobile-cart-btn">
+    Warenkorb (<span id="mobileCartTotal">0.00 €</span>)
+</button>
+
+<div id="mobileCartOverlay" class="mobile-cart-overlay">
+  <div class="mobile-cart-content">
+      <button id="closeMobileCart" class="close-cart-btn">×</button>
+      <h2>Warenkorb</h2>
+      <div id="mobileCartItems"></div>
+      <div class="mobile-cart-summary">
+          Gesamt: <span id="mobileCartTotalDialog">0.00 €</span>
+      </div>
+      <button class="order-btn" id="mobileOrderBtn">Bestellung abschicken</button>
+  </div>
+</div>
 
 
   <script src="./js/object.js"></script>
   <script src="./js/template.js"></script>
   <script src="script.js"></script>
+  <script src="./js/mobil-cart.js"></script>
 
 </body>
 

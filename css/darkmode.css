@@ -34,7 +34,6 @@ body.dark-mode .order-btn:hover {
     background: #8c08a1;
 }
 
-/* DARK MODE */
 body.dark-mode {
     background-color: #121212;
     color: #f0f0f0;
@@ -183,4 +182,10 @@ body.dark-mode .band img {
 body.dark-mode .footer {
     background-color: #690579;
     color: #f0f0f0;
+}
+body.dark-mode .mobile-cart-btn{
+    background: #8c08a1;
+}
+body.dark-mode .mobile-cart-content{
+    background: #444;
 }
