@@ -1,12 +1,7 @@
-// ---- Globale Elemente ----
-// let mobileCartItems = document.getElementById("mobileCartItems");
-// let mobileCartTotalDialog = document.getElementById("mobileCartTotalDialog");
-// let mobileCartTotal = document.getElementById("mobileCartTotal");
 
-//Mobile 
 function renderMobileCart() {
-    let html = buildMobileCartItems(); 
-    let total = calculateMobileCartTotal(); 
+    let html = buildMobileCartItems();
+    let total = calculateMobileCartTotal();
 
     if (cart.length === 0) html = "<p>Warenkorb ist leer</p>";
 
@@ -15,7 +10,6 @@ function renderMobileCart() {
     mobileCartTotal.innerText = total.toFixed(2) + " €";
 }
 
-// Mobile Cart Total 
 function calculateMobileCartTotal() {
     let total = 0;
     for (let i = 0; i < cart.length; i++) {
@@ -28,26 +22,34 @@ function showOrderMessage() {
     document.getElementById("orderMessage").style.display = "block";
 }
 
+function openMobileCart() {
+    renderMobileCart();
+    document.getElementById("mobileCartOverlay").style.display = "flex";
+}
+
+function closeMobileCart() {
+    document.getElementById("mobileCartOverlay").style.display = "none";
+}
+
+function submitMobileOrder() {
+    cart = [];
+    renderCart();
+    renderMobileCart();
+    showOrderMessage();
+    placeOrder();
+    closeMobileCart();
+}
+
 function setupMobileCart() {
-    let cartToggleBtn = document.getElementById("cartToggleBtn");
-    let mobileCartOverlay = document.getElementById("mobileCartOverlay");
-    let closeMobileCart = document.getElementById("closeMobileCart");
-    let mobileOrderBtn = document.getElementById("mobileOrderBtn");
+    document.getElementById("cartToggleBtn").onclick = openMobileCart;
+    document.getElementById("closeMobileCart").onclick = closeMobileCart;
+    document.getElementById("mobileOrderBtn").onclick = submitMobileOrder;
+}
 
-    cartToggleBtn.onclick = function() {
-        renderMobileCart();
-        mobileCartOverlay.style.display = "flex";
-    };
-
-    closeMobileCart.onclick = function() {
-        mobileCartOverlay.style.display = "none";
-    };
-
-    mobileOrderBtn.onclick = function() {
-        cart = [];
-        renderCart();
-        renderMobileCart();
-        showOrderMessage();
-        mobileCartOverlay.style.display = "none";
-    };
+function buildMobileCartItems() {
+    let html = "";
+    for (let i = 0; i < cart.length; i++) {
+        html += mobileCartItemTemplate(cart[i]); 
+    }
+    return html;
 }

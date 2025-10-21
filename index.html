@@ -9,7 +9,15 @@
   <link rel="stylesheet" href="./css/basics.css">
   <link rel="stylesheet" href="./css/mediaquaris.css">
   <link rel="stylesheet" href="./css/darkmode.css">
-  <link rel="icon" type="image/vnd.icon" href="/assets/Favicon/favicon.ico">
+
+  <link rel="icon" href="./assets/Favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/Favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/Favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/Favicon/android-chrome-512x512.png">
+
 </head>
 
 <body onload="init()">
@@ -46,7 +54,7 @@
       </nav>
 
       <div class="band container">
-        <img id="categoryImage" src="./assets/Gerichte/türkische-pide.jpg" alt="food band">
+        <img id="categoryImage" src="./assets/Gerichte/allfood.jpg" alt="food band">
       </div>
 
       <section class="menu container">
@@ -93,26 +101,29 @@
       </div>
     </div>
   </footer>
-  
-<!-- Responsive Warenkorb (Overlay/Dialog) -->
-<button id="cartToggleBtn" class="mobile-cart-btn">
-    Warenkorb (<span id="mobileCartTotal">0.00 €</span>)
-</button>
 
-<div id="mobileCartOverlay" class="mobile-cart-overlay">
-  <div class="mobile-cart-content">
+  <button id="cartToggleBtn" class="mobile-cart-btn">
+    Warenkorb (<span id="mobileCartTotal">0.00 €</span>)
+  </button>
+
+  <dialog id="mobileCartOverlay" class="mobile-cart-overlay">
+    <div class="mobile-cart-content">
       <button id="closeMobileCart" class="close-cart-btn">×</button>
       <h2>Warenkorb</h2>
       <div id="mobileCartItems"></div>
       <div class="mobile-cart-summary">
-          Gesamt: <span id="mobileCartTotalDialog">0.00 €</span>
+        Gesamt: <span id="mobileCartTotalDialog">0.00 €</span>
       </div>
       <button class="order-btn" id="mobileOrderBtn">Bestellung abschicken</button>
-  </div>
-</div>
+      <div id="orderMessageMobile" class="order-message" style="display: none;">
+        ✅ Du hast eine Testbestellung gemacht!
+        <button onclick="hideMobileMessage()">OK</button>
+      </div>
+    </div>
+  </dialog>
 
 
-  <script src="./js/object.js"></script>
+  <script src="./js/db.js"></script>
   <script src="./js/template.js"></script>
   <script src="script.js"></script>
   <script src="./js/mobil-cart.js"></script>

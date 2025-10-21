@@ -1,4 +1,4 @@
-//  Dish HTML 
+
 function createDishHTML(dish, index, categoryIndex) {
   return `
     <li class="menu-item">
@@ -14,32 +14,35 @@ function createDishHTML(dish, index, categoryIndex) {
   `;
 }
 
-// Desktop Cart Item HTML
 function createCartItemHTML(item) {
   return `
     <div class="cart-item">
       <div class="ci-left">
         <div class="ci-name">${item.name}</div>
-        <div class="ci-qty">${item.quantity}x</div>
+        <div class="ci-qty">
+          <button class="add-btn" onclick="decreaseQuantity('${item.name}')">−</button>
+          ${item.quantity}x
+          <button class="add-btn" onclick="increaseQuantity('${item.name}')">+</button>
+        </div>
       </div>
       <div class="ci-right">
         <div class="ci-price">${(item.price * item.quantity).toFixed(2)}€</div>
-        <button class="remove-btn" onclick="removeItemFromCart('${item.name}')">−</button>
+        <button class="remove-btn" onclick="removeItemFromCart('${item.name}')">🗑</button>
       </div>
     </div>
   `;
 }
 
-// Mobile Cart Items HTML
-function buildMobileCartItems() {
-    let html = "";
-    for (let i = 0; i < cart.length; i++) {
-        html += `
-            <div>
-                ${cart[i].name} (${cart[i].quantity}x)
-                <button onclick="removeItemFromCart('${cart[i].name}')">−</button>
-            </div>
-        `;
-    }
-    return html;
+function mobileCartItemTemplate(item) {
+  return `
+    <div class="mobile-cart-item">
+      <span>${item.name} (${item.quantity}x)</span>
+      <div class="mobile-controls">
+        <button class="add-btn" onclick="decreaseQuantity('${item.name}')">−</button>
+        <button class="add-btn" onclick="increaseQuantity('${item.name}')">+</button>
+        <button class="remove-btn" onclick="removeItemFromCart('${item.name}')">🗑</button>
+      </div>
+    </div>
+  `;
 }
+

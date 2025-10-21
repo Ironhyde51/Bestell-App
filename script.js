@@ -1,4 +1,10 @@
-// CART 
+function init() {
+    renderMenu(0);
+    renderCart();
+    renderMobileCart();
+    setupMobileCart();
+}
+
 let cart = [];
 
 function addItemToCart(item) {
@@ -27,6 +33,42 @@ function findCartItemIndex(itemName) {
         if (cart[i].name === itemName) return i;
     }
     return -1;
+}
+
+function increaseQuantity(name) {
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === name) {
+            cart[i].quantity++;
+            break;
+        }
+    }
+    renderCart();
+    renderMobileCart();
+}
+
+function decreaseQuantity(name) {
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === name) {
+            cart[i].quantity--;
+            if (cart[i].quantity <= 0) {
+                cart.splice(i, 1);
+            }
+            break;
+        }
+    }
+    renderCart();
+    renderMobileCart();
+}
+
+function removeItemFromCart(name) {
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === name) {
+      cart.splice(i, 1);
+      break;
+    }
+  }
+  renderCart();
+  renderMobileCart();
 }
 
 function decreaseItemQuantity(index) {
@@ -77,7 +119,6 @@ function renderCart() {
     cartDiv.innerHTML = cart.length === 0 ? "<p>Warenkorb ist leer</p>" : html;
 }
 
-// MENU 
 function renderMenu(categoryIndex) {
     let list = document.getElementById("menuList");
     let categories = getCategoriesToShow(categoryIndex);
@@ -116,7 +157,6 @@ function addToCart(categoryIndex, itemIndex) {
     renderMobileCart();
 }
 
-// UI 
 function updateCategoryImage(categoryIndex) {
     let img = document.getElementById("categoryImage");
     let index = (categoryIndex >= 0 && categoryIndex < categoryImages.length) ? categoryIndex : 0;
@@ -133,12 +173,4 @@ function updateActiveTab(activeIndex) {
 
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-}
-
-// INIT 
-function init() {
-    renderMenu(0);
-    renderCart();
-    renderMobileCart();
-    setupMobileCart();
 }

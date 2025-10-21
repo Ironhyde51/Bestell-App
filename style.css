@@ -88,7 +88,7 @@
     opacity: 0.95;
 }
 
-/* round badge center */
+
 .logo-badge {
     width: 96px;
     height: 96px;
@@ -109,7 +109,7 @@
     border-radius: 50%;
 }
 
-/* Tabs */
+
 .tabs {
     display: flex;
     gap: 12px;
@@ -118,9 +118,9 @@
 }
 
 .tab {
-    background: transparent;
+    background: #eae7e7;
     border: 1px solid #eee;
-    padding: 8px 12px;
+    padding: 14px 15px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
@@ -128,12 +128,12 @@
 }
 
 .tab.active {
-    background: #fffbf6;
+    background: #ff800024;
     border-color: #ffd6a6;
     color: #ff7f00;
 }
 
-/* Decorative band image */
+
 .band {
     margin-top: 8px;
 }
@@ -145,19 +145,18 @@
     border-radius: 4px;
 }
 
-/* Menu */
+
 .menu {
     padding: 16px 64px 40px 64px;
 }
 
 .section-heading {
-    font-size: 16px;
+    font-size: 24px;
     padding: 10px 0;
     color: #333;
     font-weight: 700;
 }
 
-/* Menu list style */
 .menu-list {
     list-style: none;
     display: block;
@@ -177,14 +176,14 @@
 }
 
 .dish {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
     color: #222;
     margin-bottom: 6px;
 }
 
 .meta {
-    font-size: 13px;
+    font-size: 16px;
     color: #777;
 }
 
@@ -210,7 +209,6 @@
     box-shadow: 0 6px 14px rgba(255, 127, 0, 0.14);
 }
 
-/* Cart area (right) */
 .cart {
     position: sticky;
     top: 92px;
@@ -256,7 +254,7 @@
 }
 
 .ci-qty {
-    font-size: 13px;
+    font-size: 16px;
     color: #888;
 }
 
@@ -293,7 +291,6 @@
     font-size: 15px;
 }
 
-/* footer */
 .footer {
     background-color: #ff8000;
     color: white;
@@ -327,13 +324,12 @@
     opacity: 0.8;
 }
 
-/* Mobile Cart*/
 .mobile-cart-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 83px;
     left: 50%;
     transform: translateX(-50%);
-    background: #ff7f00;
+    background: #ff6600;
     color: white;
     border: none;
     padding: 10px 16px;
@@ -343,7 +339,6 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
 }
-
 
 .mobile-cart-overlay {
     position: fixed;
@@ -358,7 +353,6 @@
     z-index: 999;
 }
 
-
 .mobile-cart-content {
     background: white;
     width: 90%;
@@ -367,7 +361,6 @@
     border-radius: 8px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
-
 
 .close-cart-btn {
     background: #e74c3c;
@@ -379,5 +372,7 @@
     cursor: pointer;
     float: right;
 }
-
+.dialog{
+    color: canvastext;
+}
 

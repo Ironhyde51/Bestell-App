@@ -1,7 +1,17 @@
+
+@media (max-width: 2000px) {
+    .mobile-cart-btn{
+        display: none;
+    }
+}
+
 /* 1440px */
 @media (max-width: 1440px) {
     .layout {
         grid-template-columns: 2fr 1fr;
+    }
+    .mobile-cart-btn{
+        display: none;
     }
 }
 
@@ -13,6 +23,9 @@
     .menu {
         padding: 16px 32px;
     }
+        .mobile-cart-btn{
+        display: none;
+    }
 }
 
 /* 900px */
@@ -21,9 +34,13 @@
         grid-template-columns: 1fr;
     }
     .cart {
+        display: none;
         position: relative;
         width: auto;
         margin-top: 18px;
+    }
+        .mobile-cart-btn{
+        display: block;
     }
 }
 
